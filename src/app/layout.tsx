@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   title: "Cloud Ceiling - Dream Cloud Ceiling Kit | ঢাকায় ডেলিভারি",
   description: "আপনার ঘরকেই বানিয়ে ফেলুন Dream Cloud Ceiling! Plug & Play System সহ, কোনো ইলেকট্রিশিয়ান লাগবে না। মোবাইল অ্যাপ ও ভয়েস কন্ট্রোল সহ।",
   keywords: "cloud ceiling, dream ceiling, bengali, dhaka, delivery, rgb lights, home decoration",
+  verification: {
+    other: {
+      'facebook-domain-verification': '6g9bl9ljj25jx3s5baizigk96tso0i'
+    }
+  }
 };
 
 export default function RootLayout({
