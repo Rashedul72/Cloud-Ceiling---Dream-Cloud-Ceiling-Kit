@@ -92,7 +92,7 @@ A single-page Next.js landing page for Cloud Ceiling product targeting Bengali-s
 - **Content**:
   - Copyright: "©️ ২০২৫ wholesalebd | তৈরি করেছে Top1Team"
   - WhatsApp contact: "📞 WhatsApp: 01342226632"
-- **Styling**: Minimal, clean design
+- **Styling**: Minimal, clean design 
 
 ## Technical Implementation Details
 
