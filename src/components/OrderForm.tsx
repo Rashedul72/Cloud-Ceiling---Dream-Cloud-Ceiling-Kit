@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { trackFormSubmission, trackButtonClick } from '@/lib/facebook-pixel';
 
 interface OrderFormData {
   name: string;
@@ -76,6 +77,10 @@ const OrderForm = () => {
     }
 
     setIsSubmitting(true);
+    
+    // Track form submission in Meta Pixel
+    trackFormSubmission(formData);
+    trackButtonClick('OrderForm_Submit', 'order_section');
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));

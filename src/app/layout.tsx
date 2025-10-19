@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_Bengali } from "next/font/google";
 import "./globals.css";
+import MetaPixel from "@/components/MetaPixel";
 
 const notoSansBengali = Noto_Sans_Bengali({
   variable: "--font-noto-sans-bengali",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body
         className={`${notoSansBengali.variable} font-sans antialiased`}
       >
+        <MetaPixel />
         {children}
       </body>
     </html>

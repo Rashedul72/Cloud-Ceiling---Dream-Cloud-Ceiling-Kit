@@ -12,9 +12,13 @@ import OrderForm from '@/components/OrderForm';
 import Footer from '@/components/Footer';
 import Loading from '@/components/Loading';
 import ScrollAnimation from '@/components/ScrollAnimation';
+import { useScrollTracking } from '@/hooks/useScrollTracking';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  
+  // Initialize scroll tracking
+  useScrollTracking();
 
   useEffect(() => {
     // Simulate loading time
@@ -57,9 +61,9 @@ export default function Home() {
           <Review />
         </ScrollAnimation>
         
-        {/* <ScrollAnimation delay={0.2}>
+        <ScrollAnimation delay={0.2}>
           <OrderForm />
-        </ScrollAnimation> */}
+        </ScrollAnimation>
       </main>
       
       <ScrollAnimation delay={0.2}>

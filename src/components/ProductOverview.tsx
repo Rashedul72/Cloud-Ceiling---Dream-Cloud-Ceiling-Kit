@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import Image from 'next/image';
+import { trackProductView } from '@/lib/facebook-pixel';
+import { useEffect } from 'react';
 
 const ProductOverview = () => {
   const packageItems = [
@@ -32,6 +34,11 @@ const ProductOverview = () => {
       description: "পেশাদার ব্রাশ সেট"
     }
   ];
+
+  useEffect(() => {
+    // Track when product section comes into view
+    trackProductView();
+  }, []);
 
   return (
     <section id="product" className="py-20 bg-gray-50">

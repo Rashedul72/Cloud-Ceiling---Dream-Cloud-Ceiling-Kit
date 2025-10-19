@@ -2,13 +2,19 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Smartphone, Zap, Music } from 'lucide-react';
+import { trackVideoPlay, trackButtonClick } from '@/lib/facebook-pixel';
 
 const Hero = () => {
   const scrollToOrder = () => {
     const element = document.getElementById('order');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      trackButtonClick('Hero_ScrollToOrder', 'hero_section');
     }
+  };
+
+  const handleVideoPlay = () => {
+    trackVideoPlay();
   };
 
   return (
@@ -20,6 +26,7 @@ const Hero = () => {
           loop
           muted
           playsInline
+          onPlay={handleVideoPlay}
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/Video/HeaderBG.mp4" type="video/mp4" />

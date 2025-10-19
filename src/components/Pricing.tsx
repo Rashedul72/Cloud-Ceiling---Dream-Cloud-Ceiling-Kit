@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { Check, Star } from 'lucide-react';
+import { trackPricingView, trackButtonClick } from '@/lib/facebook-pixel';
+import { useEffect } from 'react';
 
 const Pricing = () => {
   const packages = [
@@ -56,8 +58,14 @@ const Pricing = () => {
     const element = document.getElementById('order');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      trackButtonClick('Pricing_ScrollToOrder', 'pricing_section');
     }
   };
+
+  useEffect(() => {
+    // Track when pricing section comes into view
+    trackPricingView();
+  }, []);
 
   return (
     <section id="pricing" className="py-20 bg-white">

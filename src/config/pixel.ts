@@ -1,0 +1,21 @@
+// Meta Pixel Configuration
+// Replace 'YOUR_PIXEL_ID' with your actual Meta Pixel ID from Facebook Business Manager
+
+export const PIXEL_CONFIG = {
+  // Your Meta Pixel ID - Get this from Facebook Business Manager > Events Manager
+  PIXEL_ID: 'YOUR_PIXEL_ID', // Replace with your actual Pixel ID
+  
+  // Enable/disable pixel tracking (useful for development)
+  ENABLED: process.env.NODE_ENV === 'production' || process.env.NEXT_PUBLIC_ENABLE_PIXEL === 'true',
+  
+  // Debug mode (shows pixel events in console)
+  DEBUG: process.env.NODE_ENV === 'development',
+};
+
+// Instructions for setup:
+// 1. Go to Facebook Business Manager (business.facebook.com)
+// 2. Navigate to Events Manager
+// 3. Create a new Pixel or use existing one
+// 4. Copy the Pixel ID and replace 'YOUR_PIXEL_ID' above
+// 5. Test the pixel using Facebook Pixel Helper browser extension
+// 6. Verify events in Events Manager > Test Events
