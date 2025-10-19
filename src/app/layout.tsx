@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   keywords: "cloud ceiling, dream ceiling, bengali, dhaka, delivery, rgb lights, home decoration",
   verification: {
     other: {
-      'facebook-domain-verification': '6g9bl9ljj25jx3s5baizigk96tso0i'
+      'facebook-domain-verification': 'wgdos5w2dkx3jn7wzp68aevcqu72gt'
     }
   }
 };
