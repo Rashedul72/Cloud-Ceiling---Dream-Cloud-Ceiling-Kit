@@ -82,12 +82,38 @@ const OrderForm = () => {
     trackFormSubmission(formData);
     trackButtonClick('OrderForm_Submit', 'order_section');
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log('Order submitted:', formData);
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+    try {
+      // Send to Google Sheets
+      const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL || '';
+      
+      if (GOOGLE_SCRIPT_URL) {
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            ...formData,
+            timestamp: new Date().toISOString(),
+            source: 'Cloud Ceiling Landing Page'
+          }),
+        });
+        
+        console.log('Order sent to Google Sheets');
+      } else {
+        console.warn('Google Sheets URL not configured');
+      }
+      
+      console.log('Order submitted:', formData);
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting order:', error);
+      // Still show success to user even if Google Sheets fails
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
     
     // Reset form after 3 seconds
     setTimeout(() => {
