@@ -175,6 +175,89 @@ const ProductOverview = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Video Tutorial Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-20"
+        >
+          <div className="text-center mb-12">
+            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              🎥 ভিডিও টিউটোরিয়াল দেখুন
+            </h3>
+            <p className="text-xl text-gray-600">
+              কিভাবে Cloud Ceiling সেটআপ করবেন তা ধাপে ধাপে শিখুন
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+              <div className="relative aspect-video bg-gray-900">
+                <video
+                  controls
+                  preload="metadata"
+                  className="w-full h-full"
+                  poster="/images/1.jpeg"
+                >
+                  <source src="/Video/tutorial.mp4" type="video/mp4" />
+                  আপনার ব্রাউজার ভিডিও প্লেব্যাক সমর্থন করে না।
+                </video>
+              </div>
+              
+              {/* Video Description */}
+              <div className="p-6 bg-gradient-to-r from-[#58ac1c]/5 to-green-50">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-[#58ac1c] rounded-full flex items-center justify-center">
+                      <Check className="h-6 w-6 text-white" />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-gray-900 mb-2">
+                      সম্পূর্ণ ইনস্টলেশন গাইড
+                    </h4>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      এই ভিডিওতে আপনি দেখতে পাবেন কিভাবে সহজেই Cloud Ceiling সেটআপ করতে হয়। 
+                      কোনো ইলেকট্রিশিয়ান ছাড়াই ঘরে বসে আপনি নিজেই তৈরি করতে পারবেন।
+                    </p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                      <div className="flex items-center space-x-2">
+                        <span className="text-[#58ac1c]">✓</span>
+                        <span className="text-gray-600">Step by Step</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-[#58ac1c]">✓</span>
+                        <span className="text-gray-600">বাংলায় গাইড</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-[#58ac1c]">✓</span>
+                        <span className="text-gray-600">সহজ প্রক্রিয়া</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-[#58ac1c]">✓</span>
+                        <span className="text-gray-600">DIY Friendly</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Support Note */}
+            <div className="mt-8 text-center">
+              <p className="text-gray-600 mb-4">
+                ভিডিও দেখেও যদি বুঝতে সমস্যা হয়, আমরা আছি সাহায্যের জন্য
+              </p>
+              <div className="inline-flex items-center space-x-2 bg-[#58ac1c] text-white px-6 py-3 rounded-full font-semibold">
+                <span>📞</span>
+                <span>২৪/৭ ভিডিও কল সাপোর্ট উপলব্ধ</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

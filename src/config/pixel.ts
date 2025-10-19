@@ -3,7 +3,7 @@
 
 export const PIXEL_CONFIG = {
   // Your Meta Pixel ID - Get this from Facebook Business Manager > Events Manager
-  PIXEL_ID: 'YOUR_PIXEL_ID', // Replace with your actual Pixel ID
+  PIXEL_ID: '1524932278925670', // Your actual Pixel ID
   
   // Enable/disable pixel tracking (useful for development)
   ENABLED: process.env.NODE_ENV === 'production' || process.env.NEXT_PUBLIC_ENABLE_PIXEL === 'true',

@@ -105,8 +105,8 @@ const OrderForm = () => {
 
   const packages = [
     { value: '50', label: '50 স্কয়ার ফিট - ৳3000' },
-    { value: '100', label: '100 স্কয়ার ফিট - ৳5500' },
-    { value: '200', label: '200 স্কয়ার ফিট - ৳8999' },
+    { value: '100 - 120', label: '100 - 120 স্কয়ার ফিট - ৳5500' },
+    { value: '200 - 240', label: '200 - 240 স্কয়ার ফিট - ৳8999' },
   ];
 
   const deliveryAreas = [

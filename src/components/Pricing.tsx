@@ -13,7 +13,7 @@ const Pricing = () => {
       originalPrice: "৳4000",
       features: [
         "লাইট পার হওয়া Cloud Fiber",
-        "RGB Smart Light",
+        "RGB Smart Light (32 ফিট)",
         "গন্ধবিহীন Glue",
         "Two Side Adhesive Tape",
         "Brush Set",
@@ -22,12 +22,12 @@ const Pricing = () => {
       popular: false
     },
     {
-      size: "100 স্কয়ার ফিট",
+      size: "100 - 120 স্কয়ার ফিট",
       price: "৳5500",
       originalPrice: "৳7000",
       features: [
         "লাইট পার হওয়া Cloud Fiber",
-        "RGB Smart Light",
+        "RGB Smart Light (63 ফিট)",
         "গন্ধবিহীন Glue",
         "Two Side Adhesive Tape",
         "Brush Set",
@@ -37,12 +37,12 @@ const Pricing = () => {
       popular: true
     },
     {
-      size: "200 স্কয়ার ফিট",
+      size: "200 - 240 স্কয়ার ফিট",
       price: "৳8999",
       originalPrice: "৳12000",
       features: [
         "লাইট পার হওয়া Cloud Fiber",
-        "RGB Smart Light",
+        "RGB Smart Light (126 ফিট)",
         "গন্ধবিহীন Glue",
         "Two Side Adhesive Tape",
         "Brush Set",
