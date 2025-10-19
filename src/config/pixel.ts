@@ -5,11 +5,11 @@ export const PIXEL_CONFIG = {
   // Your Meta Pixel ID - Get this from Facebook Business Manager > Events Manager
   PIXEL_ID: '1524932278925670', // Your actual Pixel ID
   
-  // Enable/disable pixel tracking (useful for development)
-  ENABLED: process.env.NODE_ENV === 'production' || process.env.NEXT_PUBLIC_ENABLE_PIXEL === 'true',
+  // Enable/disable pixel tracking (enabled by default for static export)
+  ENABLED: true, // Set to false if you want to disable tracking
   
   // Debug mode (shows pixel events in console)
-  DEBUG: process.env.NODE_ENV === 'development',
+  DEBUG: false, // Set to true for debugging
 };
 
 // Instructions for setup:
