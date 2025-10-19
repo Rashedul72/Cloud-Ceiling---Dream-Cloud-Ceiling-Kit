@@ -1,18 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
-import { initFacebookPixel, trackPageView, PIXEL_ID } from '@/lib/facebook-pixel';
+import { PIXEL_ID } from '@/lib/facebook-pixel';
 import { PIXEL_CONFIG } from '@/config/pixel';
 
 const MetaPixel = () => {
-  useEffect(() => {
-    // Initialize Facebook Pixel when component mounts
-    initFacebookPixel();
-    
-    // Track initial page view
-    trackPageView();
-  }, []);
-
   // Add noscript fallback for users with JavaScript disabled
   return (
     <>
