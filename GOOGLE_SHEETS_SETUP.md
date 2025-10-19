@@ -137,20 +137,14 @@ function testPost() {
 
 ---
 
-### Step 5: Add URL to Your Project
+### Step 5: URL Already Configured! ✅
 
-1. In your project folder, create a file named: `.env.local`
-2. Add this line (replace with YOUR URL):
-   ```
-   NEXT_PUBLIC_GOOGLE_SHEETS_URL=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
-   ```
-
-**Example:**
+Your Google Sheets URL is already hardcoded in the project:
 ```
-NEXT_PUBLIC_GOOGLE_SHEETS_URL=https://script.google.com/macros/s/AKfycbxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/exec
+https://script.google.com/macros/s/AKfycbwHKwDsDFaxiO5vXkz_Pij2VUoUauWQntcZkUlBSeA5_74ejUuCwdiUdB_wNd09vdTe2w/exec
 ```
 
-3. Save the file
+If you ever need to change it, edit `src/components/OrderForm.tsx` line 87.
 
 ---
 

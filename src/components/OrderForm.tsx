@@ -84,26 +84,22 @@ const OrderForm = () => {
     
     try {
       // Send to Google Sheets
-      const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SHEETS_URL || '';
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwHKwDsDFaxiO5vXkz_Pij2VUoUauWQntcZkUlBSeA5_74ejUuCwdiUdB_wNd09vdTe2w/exec';
       
-      if (GOOGLE_SCRIPT_URL) {
-        const response = await fetch(GOOGLE_SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            ...formData,
-            timestamp: new Date().toISOString(),
-            source: 'Cloud Ceiling Landing Page'
-          }),
-        });
-        
-        console.log('Order sent to Google Sheets');
-      } else {
-        console.warn('Google Sheets URL not configured');
-      }
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          timestamp: new Date().toISOString(),
+          source: 'Cloud Ceiling Landing Page'
+        }),
+      });
+      
+      console.log('Order sent to Google Sheets');
       
       console.log('Order submitted:', formData);
       setIsSubmitted(true);
