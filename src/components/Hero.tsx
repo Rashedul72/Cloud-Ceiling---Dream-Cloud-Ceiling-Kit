@@ -52,54 +52,14 @@ const Hero = () => {
             }}
           >
             🌙 আপনার ঘরকেই বানিয়ে ফেলুন{' '}
-            <motion.span 
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ 
-                opacity: 1, 
-                scale: 1,
+            <span 
+              className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-[#58ac1c]"
+              style={{
+                textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000"
               }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="relative inline-block"
             >
-              <motion.span
-                animate={{
-                  textShadow: [
-                    "0 0 20px #ff6b00, 0 0 40px #ff6b00, 0 0 60px #ff6b00, -10px -10px 0 #000, 10px -10px 0 #000, -10px 10px 0 #000, 10px 10px 0 #000, -10px 0 0 #000, 10px 0 0 #000, 0 -10px 0 #000, 0 10px 0 #000",
-                    "0 0 30px #ffaa00, 0 0 50px #ffaa00, 0 0 70px #ffaa00, -10px -10px 0 #000, 10px -10px 0 #000, -10px 10px 0 #000, 10px 10px 0 #000, -10px 0 0 #000, 10px 0 0 #000, 0 -10px 0 #000, 0 10px 0 #000",
-                    "0 0 20px #ff6b00, 0 0 40px #ff6b00, 0 0 60px #ff6b00, -10px -10px 0 #000, 10px -10px 0 #000, -10px 10px 0 #000, 10px 10px 0 #000, -10px 0 0 #000, 10px 0 0 #000, 0 -10px 0 #000, 0 10px 0 #000",
-                  ],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="text-5xl sm:text-6xl lg:text-7xl text-[#58ac1c] bg-gradient-to-r from-[#ff6b00] via-[#ffaa00] to-[#58ac1c] bg-clip-text text-transparent font-extrabold"
-                style={{
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  WebkitTextStroke: "5px black",
-                }}
-              >
-                Dream Cloud Ceiling!
-              </motion.span>
-              
-              {/* Fire particles effect */}
-              <motion.span
-                className="absolute -top-2 left-0 right-0 h-full pointer-events-none"
-                animate={{
-                  opacity: [0.3, 0.6, 0.3],
-                }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <span className="absolute top-0 left-1/4 text-2xl">🔥</span>
-                <span className="absolute top-0 right-1/4 text-2xl">🔥</span>
-              </motion.span>
-            </motion.span>
+              Dream Cloud Ceiling!
+            </span>
           </motion.h1>
 
           {/* Subheading */}

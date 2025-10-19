@@ -32,7 +32,7 @@ const ScrollAnimation = ({
     <motion.div
       initial={initial}
       whileInView={animate}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{
         duration,
         delay,
