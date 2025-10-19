@@ -97,8 +97,8 @@ export const trackScrollDepth = (depth: number) => {
 const getPackageValue = (packageSize: string): number => {
   const values: { [key: string]: number } = {
     '50': 3000,
-    '100': 5500,
-    '200': 8999
+    '100 - 120': 5500,
+    '200 - 240': 8999
   };
   return values[packageSize] || 0;
 };
