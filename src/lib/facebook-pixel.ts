@@ -56,11 +56,27 @@ export const trackEvent = (eventName: string, parameters?: any) => {
 
 // Track form submission
 export const trackFormSubmission = (formData: any) => {
+  const packageValue = getPackageValue(formData.package);
+  
+  // Track as Lead (someone interested)
   trackEvent('Lead', {
     content_name: 'Cloud Ceiling Order Form',
     content_category: 'Home Decoration',
-    value: getPackageValue(formData.package),
+    value: packageValue,
     currency: 'BDT'
+  });
+  
+  // Also track as Purchase (order placed)
+  trackEvent('Purchase', {
+    content_name: 'Cloud Ceiling Kit',
+    content_type: 'product',
+    value: packageValue,
+    currency: 'BDT',
+    content_ids: [formData.package],
+    contents: [{
+      id: formData.package,
+      quantity: 1
+    }]
   });
   
   // Also track as custom event
