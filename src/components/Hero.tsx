@@ -39,7 +39,7 @@ const Hero = () => {
       {/* Additional gradient overlay for better text contrast */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-green-900/20"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 sm:pt-24">
         <div className="max-w-4xl mx-auto">
           {/* Main headline */}
           <motion.h1 
