@@ -83,7 +83,9 @@ export const trackFormSubmission = (formData: any) => {
   trackEvent('CloudCeiling_FormSubmission', {
     package_size: formData.package,
     delivery_area: formData.deliveryArea,
-    form_type: 'order_form'
+    form_type: 'order_form',
+    value: packageValue,
+    currency: 'BDT'
   });
 };
 
@@ -98,14 +100,18 @@ export const trackPageView = () => {
 export const trackButtonClick = (buttonName: string, location: string) => {
   trackEvent('CloudCeiling_ButtonClick', {
     button_name: buttonName,
-    location: location
+    location: location,
+    value: 0,
+    currency: 'BDT'
   });
 };
 
 // Track scroll depth
 export const trackScrollDepth = (depth: number) => {
   trackEvent('CloudCeiling_ScrollDepth', {
-    scroll_depth: depth
+    scroll_depth: depth,
+    value: 0,
+    currency: 'BDT'
   });
 };
 
@@ -122,20 +128,26 @@ const getPackageValue = (packageSize: string): number => {
 // Track video interactions
 export const trackVideoPlay = () => {
   trackEvent('CloudCeiling_VideoPlay', {
-    video_name: 'Header Background Video'
+    video_name: 'Header Background Video',
+    value: 0,
+    currency: 'BDT'
   });
 };
 
 // Track pricing section views
 export const trackPricingView = () => {
   trackEvent('CloudCeiling_PricingView', {
-    section: 'pricing'
+    section: 'pricing',
+    value: 0,
+    currency: 'BDT'
   });
 };
 
 // Track product overview views
 export const trackProductView = () => {
   trackEvent('CloudCeiling_ProductView', {
-    section: 'product_overview'
+    section: 'product_overview',
+    value: 0,
+    currency: 'BDT'
   });
 };
